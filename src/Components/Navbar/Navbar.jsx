@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 import Logo from '../../assets/logo.png'
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm mx-auto px-6 md:px-12 lg:px-16 xl:px-24">
+        <div className="navbar bg-base-100  mx-auto px-6 py-6 md:px-12 lg:px-16 xl:px-24">
             <div className="navbar-start">
                 
                 <div className='flex'>
@@ -13,13 +13,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/'>Home</NavLink></li>
+                    <li className='text-xl  text-[#353333]'> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/'>Home</NavLink></li>
 
-                    <li> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/Bookings'>My-Bookings</NavLink></li>
+                    <li className='text-xl text-[#353333]'> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/Bookings'>My-Bookings</NavLink></li>
 
-                    <li> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/Blogs'>Blogs</NavLink></li>
+                    <li className='text-xl text-[#353333]'> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/Blogs'>Blogs</NavLink></li>
 
-                    <li> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/Error'>Contact Us</NavLink></li>
+                    <li className='text-xl text-[#353333]'> <NavLink className={({ isActive }) => isActive ? 'text-black underline' : ''} to='/Error'>Contact Us</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
