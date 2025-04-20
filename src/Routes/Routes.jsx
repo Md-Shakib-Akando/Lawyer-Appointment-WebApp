@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Bookings from "../Pages/Bookings/Bookings";
 import Blogs from "../Pages/Blogs/Blogs";
 import Error from "../Pages/Error/Error";
+import LawyerDetails from "../Pages/LawyerDetails/LawyerDetails";
 
 
 
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
           path:'/Blogs',
           Component: Blogs,
         },
-       
+       {
+        path:'/LawyerDetails',
+        Component:LawyerDetails,
+        
+       }
         
       ]
     },
