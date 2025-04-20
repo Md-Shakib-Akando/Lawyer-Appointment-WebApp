@@ -1,0 +1,135 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/HfXjB1MG/image-9.jpg",
+      "name": "Ariana Bennett",
+      "speciality": "Criminal Law",
+      "experience": "10+ Years Experience",
+      "licenseNumber": "CL-98234",
+      "fee": 3000,
+      "available": "Available",
+      "availability": ["Monday", "Wednesday", "Friday"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/LsYBVVL/image-1.jpg",
+      "name": "Jamal Thompson",
+      "speciality": "Family Law",
+      "experience":"7+ Years Experience",
+      "licenseNumber": "FL-77129",
+      "fee": 3200,
+      "available": "Available",
+      "availability": ["Tuesday", "Thursday", "Saturday"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/q3HC1Fkc/image-13.jpg",
+      "name": "Sophia Lee",
+      "speciality": "Corporate Law",
+      "experience": "12+ Years Experience",
+      "licenseNumber": "CL-45312",
+      "fee": 2000,
+      "available": "Available",
+      "availability": ["Monday", "Tuesday", "Friday"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co.com/PZrC19fb/image-2.jpg",
+      "name": "David Rosario",
+      "speciality": "Immigration Law",
+      "experience": "9+ Years Experience",
+      "licenseNumber": "IL-33877",
+      "fee": 1300,
+      "available": "Available",
+      "availability": ["Wednesday", "Thursday", "Saturday"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co.com/XZ26S7TP/image-4.jpg",
+      "name": "Linda Gomez",
+      "speciality": "Intellectual Property",
+      "experience": "8+ Years Experience",
+      "licenseNumber": "IP-22441",
+      "fee": 1700,
+      "available": "Available",
+      "availability": ["Monday", "Thursday"]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co.com/bjGtxYf5/image-6.jpg",
+      "name": "Noah Patel",
+      "speciality": "Environmental Law",
+      "experience": "6+ Years Experience",
+      "licenseNumber": "EL-99812",
+      "fee": 1100,
+      "available": "Available",
+      "availability": ["Tuesday", "Friday"]
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co.com/G30cGqbH/image-11.jpg",
+      "name": "Emily Davis",
+      "speciality": "Civil Rights Law",
+      "experience": "5+ Years Experience",
+      "licenseNumber": "CR-88321",
+      "fee": 1600,
+      "available": "Available",
+      "availability": ["Monday", "Wednesday", "Saturday"]
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co.com/wrYnCsrG/image-5.jpg",
+      "name": "Michael Zhang",
+      "speciality": "Tax Law",
+      "experience": "10+ Years Experience",
+      "licenseNumber": "TX-77549",
+      "fee": 1900,
+      "available": "Available",
+      "availability": ["Tuesday", "Thursday"]
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co.com/VpQtmH9X/image-12.jpg",
+      "name": "Sarah Ibrahim",
+      "speciality": "Healthcare Law",
+      "experience": "3+ Years Experience",
+      "licenseNumber": "HL-66230",
+      "fee": 1400,
+      "available": "Available",
+      "availability": ["Monday", "Friday"]
+    },
+    {
+      "id": 10,
+      "image": "https://i.ibb.co.com/b9LYdj6/image-8.jpg",
+      "name": "Ryan Kim",
+      "speciality": "Real Estate Law",
+      "experience": "5+ Years Experience",
+      "licenseNumber": "RE-49012",
+      "fee": 1000,
+      "available": "Available",
+      "availability": ["Wednesday", "Saturday"]
+    },
+    {
+      "id": 11,
+      "image": "https://i.ibb.co.com/HfXjB1MG/image-9.jpg",
+      "name": "Grace Nwosu",
+      "speciality": "Labor Law",
+      "experience": "11+ Years Experience",
+      "licenseNumber": "LL-30115",
+      "fee": 1250,
+      "available": "Available",
+      "availability": ["Tuesday", "Thursday", "Friday"]
+    },
+    {
+      "id": 12,
+      "image": "https://i.ibb.co.com/HDrVZ4CF/image-10.jpg",
+      "name": "Anthony Russo",
+      "speciality": "Bankruptcy Law",
+      "experience": "4+ Years Experience",
+      "licenseNumber": "BL-55721",
+      "fee": 2100,
+      "available": "Available",
+      "availability": ["Monday", "Thursday", "Saturday"]
+    }
+  ]
+  

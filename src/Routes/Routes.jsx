@@ -16,6 +16,7 @@ const router = createBrowserRouter([
         {
           index: true, path:'/',
           Component: Home,
+          loader:()=>fetch('Lawyer.json'),
         },
         {
           path:'/Bookings',
