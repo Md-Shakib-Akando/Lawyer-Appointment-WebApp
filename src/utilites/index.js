@@ -11,3 +11,9 @@ export const BookMark = (data) => {
     favorites.push(data);
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
+
+export const removeBookMark=(id)=>{
+    const favorites = getBookMark();
+    const remainingFavorite=favorites.filter(fav=>fav.id!==id);
+    localStorage.setItem('favorites', JSON.stringify(remainingFavorite));
+}
