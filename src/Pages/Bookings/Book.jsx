@@ -10,8 +10,8 @@ const Book = ({ data, handleDelete }) => {
 
             
                 <div className='flex flex-col justify-center items-center'>
-                    <h1 className='text-2xl md:text-4xl font-bold mb-3'>My Today Appointments</h1>
-                    <p className='md:text-lg'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
+                    <h1 className='text-2xl text-center md:text-4xl font-bold mb-3'>My Today Appointments</h1>
+                    <p className='md:text-lg text-center'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
                 </div>
             
             <div className=' my-5 md:mb-10 md:mt-10 py-5 px-5 md:px-10 border border-[#0F0F0F20] rounded-xl '>
