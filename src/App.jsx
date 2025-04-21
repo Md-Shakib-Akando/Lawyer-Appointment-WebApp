@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { ToastContainer } from 'react-toastify';
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import { Outlet } from 'react-router'
@@ -16,6 +16,7 @@ function App() {
       <Outlet></Outlet>
       </div>
      </div>
+     <ToastContainer />
      <Footer></Footer>
     </>
   )
