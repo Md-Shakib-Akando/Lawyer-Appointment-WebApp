@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         {
           index: true, path:'/',
           Component: Home,
-          loader:()=>fetch('Lawyer.json'),
+          loader:()=>fetch('../Lawyer.json'),
         },
         {
           path:'/Bookings',
@@ -28,9 +28,9 @@ const router = createBrowserRouter([
           Component: Blogs,
         },
        {
-        path:'/LawyerDetails',
+        path:'/LawyerDetails/:id',
         Component:LawyerDetails,
-        
+        loader:()=>fetch('../Lawyer.json'),
        }
         
       ]
