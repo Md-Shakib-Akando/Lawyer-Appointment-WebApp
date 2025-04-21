@@ -2,6 +2,8 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { AiOutlineTrademark } from "react-icons/ai";
 import { FiAlertOctagon } from "react-icons/fi";
+import { BookMark } from '../../utilites';
+
 
 
 const LawyerDetails = () => {
@@ -9,6 +11,10 @@ const LawyerDetails = () => {
     const { id } = useParams();
     const singleData = data.find((data) => data.id === parseInt(id))
     const { name, image, licenseNumber, speciality, experience, fee, available } = singleData;
+
+    const handleBookMark=()=>{
+        BookMark(singleData);
+    }
 
     return (
         <>
@@ -75,7 +81,7 @@ const LawyerDetails = () => {
                     <h1 className='flex  gap-1 text-sm md:text-lg  bg-[#FFA00015] p-3 rounded-2xl text-[#FFA000]'> <span className='mt-[2px] md:mt-[5px]'><FiAlertOctagon /></span> Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</h1>
                 </div>
 
-                <button className="relative w-full mb-4 cursor-pointer items-center justify-center inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-[#0EA106] rounded-full hover:bg-white group">
+                <button onClick={handleBookMark} className="relative w-full mb-4 cursor-pointer items-center justify-center inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-[#0EA106] rounded-full hover:bg-white group">
                     <span className="absolute inset-0 border-0 group-hover:border-2 ease-linear duration-100 transition-all border-green-600 rounded-full"></span>
                     <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-green-600 ">Book Appointment Now</span>
                 </button>

@@ -1,34 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { ScaleLoader } from 'react-spinners';
+import { getBookMark } from '../../utilites';
+import Book from './Book';
+
 
 const Bookings = () => {
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 200);
-
-        return () => clearTimeout(timer);
-    }, []);
+   const [displayData,setDisplayData]=useState([])
+    useEffect(()=>{
+        const saveData=getBookMark();
+        setDisplayData(saveData)
+    },[])
 
     return (
         <>
-            {loading ? (
-                <div className="flex justify-center items-center ">
-                    <ScaleLoader
-                        barCount={4}
-                        height={40}
-                        width={6}
-                        color="black"
-                    />
-                </div>
-            ) : (
-                <div className="text-center mt-20">
-                    <h1 className="text-3xl font-bold">This is Booking</h1>
-                </div>
-            )}
+          
+        {
+            displayData.map(data=> <Book key={data.id} data={data}></Book>)
+        }
+            
         </>
     );
 };
