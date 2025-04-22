@@ -74,7 +74,7 @@ const Bookings = () => {
                                             <XAxis dataKey="name" />
                                             <YAxis domain={[0, 'dataMax + 300']} />
                                             <Bar dataKey="fee" shape={<TriangleBar />}  >
-                                            <LabelList dataKey="fee" content={CustomLabel} />
+                                                <LabelList dataKey="fee" content={CustomLabel} />
                                                 {displayData.map((entry, index) => (
                                                     <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                                                 ))}
@@ -85,12 +85,17 @@ const Bookings = () => {
                             </div>
                         </div>
 
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='text-2xl text-center md:text-4xl font-bold mb-3'>My Today Appointments</h1>
+                            <p className='md:text-lg text-center'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
+                        </div>
 
                         {
                             displayData.map(data => (
                                 <Book key={data.id} data={data} handleDelete={handleDelete} />
                             ))
                         }
+
                     </>
                 )
             }
