@@ -2,13 +2,17 @@ import React from 'react'
 import { ToastContainer } from 'react-toastify';
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
-import { Outlet } from 'react-router'
+import { Outlet, useLocation } from 'react-router'
 import Footer from './Components/Footer/Footer'
 
 function App() {
+  const location = useLocation();
+  const hideFooter = ['/contact'];
+  const HideFooter = hideFooter.includes(location.pathname.toLowerCase());
 
 
   return (
+    
     <>
      <Navbar></Navbar>
      <div className='min-h-[calc(100vh-290px)]'>
@@ -17,7 +21,7 @@ function App() {
       </div>
      </div>
      <ToastContainer />
-     <Footer></Footer>
+     {!HideFooter && <Footer />}
     </>
   )
 }

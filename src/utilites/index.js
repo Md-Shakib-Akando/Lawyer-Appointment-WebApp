@@ -1,3 +1,4 @@
+
 import { toast } from 'react-toastify';
 
 export const getBookMark = () => {
@@ -8,14 +9,17 @@ export const getBookMark = () => {
 
 export const BookMark = (data) => {
     const favorites = getBookMark();
+    
     const isExist = favorites.find(p=>p.id===data.id)
     if (isExist) {
         toast.warn("Already added to appointments!");
-        return;
+        return false;
       }
+      
     favorites.push(data);
     localStorage.setItem('favorites', JSON.stringify(favorites));
     toast.success(`Appointment Schedule for ${data.name} successfully`);
+    return true;
 }
 
 export const removeBookMark=(id)=>{

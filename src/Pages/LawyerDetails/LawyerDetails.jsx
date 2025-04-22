@@ -1,5 +1,5 @@
-import React from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import React, { useEffect } from 'react';
+import {  useLoaderData, useNavigate, useParams } from 'react-router';
 import { AiOutlineTrademark } from "react-icons/ai";
 import { FiAlertOctagon } from "react-icons/fi";
 import { BookMark } from '../../utilites';
@@ -9,11 +9,29 @@ import { BookMark } from '../../utilites';
 const LawyerDetails = () => {
     const data = useLoaderData();
     const { id } = useParams();
-    const singleData = data.find((data) => data.id === parseInt(id))
-    const { name, image, licenseNumber, speciality, experience, fee, available } = singleData;
+    const navigate = useNavigate();
 
+    const singleData = id && (id == id * 1)
+    ? data.find((data) => data.id == id) 
+    : null;
+
+    useEffect(() => {
+        if (!singleData) {
+           
+            navigate('/Error', { replace: true });
+        }
+    }, [singleData, navigate,id]);
+    
+    if(!singleData) return null;
+
+    const { name, image, licenseNumber, speciality, experience, fee, available } = singleData;
+    
     const handleBookMark=()=>{
-        BookMark(singleData);
+        const booked =BookMark(singleData);
+        if(booked){
+            navigate('/Bookings')
+        }
+       
     }
 
     return (
