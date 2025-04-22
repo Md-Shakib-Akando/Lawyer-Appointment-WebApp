@@ -3,7 +3,7 @@ import { getBookMark, removeBookMark } from '../../utilites';
 import Book from './Book';
 import { Link } from 'react-router';
 
-import { BarChart, Bar, XAxis, YAxis, Cell, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Cell, ResponsiveContainer, LabelList } from 'recharts';
 const Bookings = () => {
     const [displayData, setDisplayData] = useState([])
     useEffect(() => {
@@ -59,7 +59,7 @@ const Bookings = () => {
                         <h1 className='text-xl md:text-4xl font-bold text-center'>You Have Not Book any appointment yet</h1>
                         <p className='text-sm md:text-lg text-center'>Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.</p>
 
-                        <Link to='/' class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-rounded="rounded-md" data-primary="blue-600" data-primary-reset="{}">
+                        <Link to='/' className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-rounded="rounded-md" data-primary="blue-600" data-primary-reset="{}">
                             Book An Appointment
                         </Link>
                     </div>
@@ -67,13 +67,14 @@ const Bookings = () => {
 
                     <>
                         <div className='pt-4 border border-[#0F0F0F20] rounded-xl mb-10'>
-                            <div className="w-full flex justify-center mb-10 overflow-x-auto">
+                            <div className="w-full flex justify-center mb-10 pt-10">
                                 <div className="w-[600px] md:w-[2000px] h-[400px] md:h-[500px]">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <BarChart data={displayData}>
                                             <XAxis dataKey="name" />
-                                            <YAxis />
-                                            <Bar dataKey="fee" shape={<TriangleBar />} label={CustomLabel}>
+                                            <YAxis domain={[0, 'dataMax + 300']} />
+                                            <Bar dataKey="fee" shape={<TriangleBar />}  >
+                                            <LabelList dataKey="fee" content={CustomLabel} />
                                                 {displayData.map((entry, index) => (
                                                     <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                                                 ))}
