@@ -9,32 +9,34 @@ import LawyerDetails from "../Pages/LawyerDetails/LawyerDetails";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      Component: App,
-      errorElement: <Error />, 
-      children: [
-        {
-          index: true, path:'/',
-          Component: Home,
-          loader:()=>fetch('../Lawyer.json'),
-        },
-        {
-          path:'/Bookings',
-          Component: Bookings,
-        },
-        {
-          path:'/Blogs',
-          Component: Blogs,
-        },
-       {
-        path:'/LawyerDetails/:id',
-        Component:LawyerDetails,
-        loader:()=>fetch('../Lawyer.json'),
-       }
-        
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    Component: App,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true, path: '/',
+        Component: Home,
+        loader: () => fetch('../Lawyer.json'),
+      },
+      {
+        path: '/Bookings',
+        Component: Bookings,
+      },
+      {
+        path: '/Blogs',
+        Component: Blogs,
+        loader: () => fetch('../Blogs.json'),
+
+      },
+      {
+        path: '/LawyerDetails/:id',
+        Component: LawyerDetails,
+        loader: () => fetch('../Lawyer.json'),
+      }
+
+    ]
+  },
+]);
 
 export default router;
