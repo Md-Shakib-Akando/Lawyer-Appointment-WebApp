@@ -63,7 +63,7 @@ const Success = () => {
                             <h1 className='text-4xl font-bold mt-5 mb-3'>
                                 {startCount && <CountUp start={0} end={1900} duration={2} />}+
                             </h1>
-                            <p className='text-[#0F0F0F70]'>Cases Initiated</p>
+                            <p className='text-[#0F0F0F70]'>Total Cases Initiated</p>
                         </div>
                     </div>
 

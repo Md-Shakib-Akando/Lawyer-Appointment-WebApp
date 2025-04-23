@@ -5,7 +5,7 @@ import Bookings from "../Pages/Bookings/Bookings";
 import Blogs from "../Pages/Blogs/Blogs";
 import Error from "../Pages/Error/Error";
 import LawyerDetails from "../Pages/LawyerDetails/LawyerDetails";
-import Book from "../Pages/Bookings/Book";
+
 import ContactUs from "../Pages/ContactUs/ContactUs";
 
 
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: App,
-    errorElement: <Error />,
+    errorElement:<Error/>,
    
     children: [
       {
@@ -47,7 +47,12 @@ const router = createBrowserRouter([
       }
 
     ]
+
   },
+  {
+    path:'/Error/:id',
+    Component: Error,
+  }
 ]);
 
 export default router;

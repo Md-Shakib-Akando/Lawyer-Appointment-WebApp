@@ -18,7 +18,7 @@ const LawyerDetails = () => {
     useEffect(() => {
         if (!singleData) {
            
-            navigate('/Error', { replace: true });
+            navigate(`/Error/${id}`, { replace: true });
         }
     }, [singleData, navigate,id]);
     
