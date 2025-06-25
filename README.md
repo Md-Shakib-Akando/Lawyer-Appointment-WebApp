@@ -1,5 +1,5 @@
 ## Project Name:
-Team Lawywe Web App
+Team Lawyer Web App
 
 
 ## 🔗 Live URL:
